@@ -1,6 +1,6 @@
 file=open("/Applications/Python 3.9/hw2_data.txt")      #打開檔案
 count={'Cheese':0}      #設定一個hash，並給一個初始才能run for迴圈
-total=0     #紀錄食物總類數
+total=1     #紀錄食物總類數
 food=file.readline().strip()    #閱讀第一行，並去除字串中的換行
 while food:     #當還有食物的時候持續在迴圈內
     a=0     #不同情況時的變數
@@ -15,6 +15,6 @@ while food:     #當還有食物的時候持續在迴圈內
         count[food]=1       #新增食物進hash
         total+=1        #食物總類數加一
     food=file.readline().strip()        #繼續閱讀下一行，並去除字串中的換行
-print('總共有',str(total),'種食物')       #列印出食物總類數
+print('總共有',str(total),'種食物',sep='')       #列印出食物總類數
 for i in count:     #將食物一一列出
-    print(i,'有',count[i],'個')       #標示各種食物有幾項
+    print(i,'有',count[i],'個',sep='')       #標示各種食物有幾項
